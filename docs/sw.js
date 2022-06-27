@@ -1,4 +1,4 @@
-var cacheName = 'de4ph-v-1.20.0';
+var cacheName = 'pwa-2';
 var filesToCache = [
 ];
 self.addEventListener('install', function(e) {
