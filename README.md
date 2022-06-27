@@ -1,5 +1,7 @@
 # pwa-playground
 
+Demo [here](https://klausschaefers.github.io/pwa-playground/)
+
 ## Project setup
 ```
 npm install
