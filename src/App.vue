@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Main v4</h1>
+    <h1>Main v5</h1>
     <button @click="addToHomeScreen">Install</button>
   </div>
 </template>
