@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <h1>Main v1</h1>
+    <h1>Main v4</h1>
+    <button @click="addToHomeScreen">Install</button>
   </div>
 </template>
 
@@ -12,17 +13,33 @@
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+</style>
+<script>
+export default {
+  name: 'App',
+  components: {
+  },
+  methods: {
+      addToHomeScreen () {
+          if (this.deferredPrompt) {
+            this.deferredPrompt.prompt()
+            this.deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                  console.log('User accepted the A2HS prompt');
+              } else {
+                console.log('User dismissed the A2HS prompt');
+                }
+              });
+          }
+      }
+  },
+  mounted () {
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        this.deferredPrompt = e;
+        console.debug("App.mounted() > beforeinstallprompt", this.deferredPrompt)
+    })
   }
 }
-</style>
+</script>
+
