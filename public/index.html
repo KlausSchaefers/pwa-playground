@@ -9,12 +9,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
-    <title>PWA Test - 5</title>
+    <title>PWA Test - 6</title>
     <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('./sw.js')
           .then(function(e) {
-                console.log('[index] Service Worker Registered - 4');
+                console.log('[index] Service Worker Registered - 6');
           });
       }
     </script>
