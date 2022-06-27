@@ -1,4 +1,4 @@
-var cacheName = 'pwa-2';
+var cacheName = 'pwa-3';
 var filesToCache = [
 ];
 self.addEventListener('install', function(e) {
